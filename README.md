@@ -1,6 +1,8 @@
 # 胡忠梁简历
 
-**Online version: https://zhonglianghu.github.io/**
+**pdf版简历: https://zhonglianghu.github.io/huzhongliangResume/**
+
+**网页版在线简历: https://zhonglianghu.github.io/**
 
 # 联系方式
 

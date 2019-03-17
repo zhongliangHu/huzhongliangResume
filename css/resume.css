@@ -227,11 +227,11 @@ dd {
   margin: 0; }
 
 .education .education-name {
-  font-size: 32px;
+  font-size: 20px;
   margin: 6px 0 5px 26px; }
 
 .education dd {
-  margin-left: 27px; }
+  margin-left: 15px; }
 
 .language .language-cert-type {
   font-size: 20px;
@@ -286,7 +286,7 @@ dd {
   .experience .experience-content {
     margin: 0; }
   .experience .experience-position {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     margin: 6px 0 5px 26px; }
   .experience .experience-task {

@@ -45,7 +45,7 @@ aside {
 
 header {
   overflow: hidden;
-  padding: 30px 45px;
+  padding: 10px 25px;
   color: #fff;
   background-color: #333; }
   @media (max-width: 767px) {
@@ -167,7 +167,7 @@ dd {
 
 .content {
   overflow: hidden;
-  padding: 30px 45px;
+  padding: 10px 25px;
   background: #fff; }
   @media (max-width: 414px) {
     .content {

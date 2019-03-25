@@ -45,7 +45,7 @@ aside {
 
 header {
   overflow: hidden;
-  padding: 10px 25px;
+  padding: 10px 25px 0px 25px;
   color: #fff;
   background-color: #333; }
   @media (max-width: 767px) {
@@ -201,7 +201,7 @@ dd {
 .timeline-wrapper {
   margin-top: -28px; }
   .timeline-wrapper ul {
-    padding-top: 28px;
+    padding-top: 20px;
     border-left: 5px solid #333; }
   .timeline-wrapper .timeline-title {
     font-size: 17px;

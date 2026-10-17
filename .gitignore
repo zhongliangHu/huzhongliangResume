@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local History
+.history/
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+.cache/

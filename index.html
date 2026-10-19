@@ -82,7 +82,7 @@
                   </h3>
                   <dl class="education-content">
                     <dt class="education-name">学天教育(在线教育)</dt>
-                    <dd class="education-major icon-trophy">大前端组，c端负责人</dd>
+                    <dd class="education-major icon-trophy">大前端组，C端负责人</dd>
                   </dl>
                   <h3 class="timeline-title">
                     <time class="education-time">2021-2024</time>
@@ -140,7 +140,7 @@
               <ul class="sec-content timeline">
                 <li class="timeline-item icon-flags">
                   <h3 class="timeline-title">
-                    <span class="skill">Web前端</span>
+                    <span class="skill">Web前端/Agent</span>
                   </h3>
                   <!-- <dl class="skill-content">
                     <dt class="skill-name">
@@ -190,9 +190,6 @@
                     <dt class="skill-name">
                       <strong>前端框架/工具</strong>
                     </dt>
-                    <dd class="skill-description icon-star">熟悉
-                      <strong>AI 应用工程</strong>，具备 Agent、RAG、SSE 流式交互和多端协议协同经验
-                    </dd>
                     <dd class="skill-description icon-star">
                       熟练使用
                       <strong>Vue3/Vue2生态链</strong>
@@ -232,6 +229,20 @@
                       <!-- 正在了解<strong>机器学习</strong>相关算法 -->
                     </dd>
                   </dl>
+                  <dl class="skill-content">
+                    <dt class="skill-name">
+                      <strong>RAG / Agent</strong>
+                    </dt>
+                    <dd class="skill-description icon-star">
+                      熟悉教育场景<strong>RAG</strong>链路：Query Rewrite、Dense + Sparse 混合召回、DashVector、多向量 WeightedRanker、Rerank 与可靠性判定
+                    </dd>
+                    <dd class="skill-description icon-star">
+                      了解<strong>Agent</strong>两层编排：Intent Router、并行 pre-flight、react 和结构化 SSE 意图协议
+                    </dd>
+                    <dd class="skill-description icon-star">
+                      掌握 RAG 可靠性设计：按实体路由、阈值校准、Rerank 失败隔离、组件熔断、降级兜底和检索审计
+                    </dd>
+                  </dl>
                   <!-- <dl class="skill-content">
                     <dt class="skill-name"><strong>计算机基础</strong></dt>
                     <dd class="skill-description icon-star">
@@ -257,24 +268,66 @@
             </div>
             <div class="timeline-wrapper">
               <ul class="sec-content timeline">
+                 <li class="timeline-item icon-bag">
+                  <h3 class="timeline-title">
+                    <span class="experience-place">学天 AI 学伴（学小天）</span>
+                    <time class="experience-time">2026.04-至今</time>
+                  </h3>
+                  <dl class="experience-content">
+                    <dt class="experience-position">产品功能与前端开发</dt>
+                    <dd class="experience-task icon-gear">
+                      面向备考学习场景打造 AI 学习智能体，围绕“问答陪伴—学习计划—今日任务—诊断提升”形成产品闭环，落地对话问答、学习计划、今日待办、学前测验、智能特训、周报和学习工作台等功能。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      基于 <strong>Vue3 + TypeScript + Hooks</strong> 开发学伴对话主链路，支持文本/语音提问、拍照上传、SSE 流式回答、思考过程、Markdown 与公式渲染、历史会话和结构化意图卡片。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      实现流式语音交互：<strong>WebSocket</strong> 传输 16kHz/16bit PCM 对接 ASR，流式 TTS 通过 Web Audio 重采样与缓冲播放，并协调 iOS 原生播放及 ASR/TTS 音频焦点，处理权限、断流、后台和取消竞态。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      通过 JSBridge 和页面路由适配 App、鸿蒙、H5、小程序及 PC 容器；消费 Agent 下发的 reasoning、node.progress、content、xuetian.intent 事件，将计划、待办、周报、素材和功能跳转渲染为可操作卡片。
+                    </dd>
+                  </dl>
+                </li>
+                <li class="timeline-item icon-bag">
+                  <h3 class="timeline-title">
+                    <span class="experience-place">学天教育 Agent 与 RAG 知识服务</span>
+                     <time class="experience-time">2026.03-2024.05</time>
+                  </h3>
+                  <dl class="experience-content">
+                    <dt class="experience-position">Agent 核心协同 / RAG 检索</dt>
+                    <dd class="experience-task icon-gear">
+                      建设教育知识 RAG 在线检索链路：结合多轮上下文进行问题理解与 Query Rewrite，调用 DashScope <strong>text-embedding-v4</strong> 生成 Dense + Sparse 表征，按考点、知识、题目实体路由至 DashVector 多路召回。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      针对不同教育语料设计检索策略：考点与题目采用 <strong>Dense + Sparse</strong> 混合检索，Knowledge 将考点、知识、题目实体路由至 DashVector 多路召回。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      在召回后接入 <strong>qwen3-rerank</strong> 重排，并以实体类型独立阈值和 rerank 可靠性判定控制证据质量；区分“检索到结果”和“结果可信”，避免重排失败时用召回分伪装可靠性。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      完善 RAG 工程可靠性：对 Query 改写、Embedding、向量检索和 Rerank 分组件容错与熔断；故障时保留可用召回但降低可靠性、切换知识源或降级回答，避免检索故障阻塞主对话，并记录检索审计信息。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      参与 Excel、MySQL、API 等教育数据入库及考点/知识/题目解析流程，区分用于向量化的清洗文本与供模型阅读的原始内容；结合内容去重、检索审计和 Ragas 评测持续验证召回与回答质量。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      Agent 主流程采用 <strong>Intent Router v4</strong>：分类器与共享 RAG 预取、业务 pre-flight 并行执行，仅消费命中意图的结果，再由无工具 Finalizer 按回答契约合成；知识问答支持受限 SkillLoop 按需并行多路检索。
+                    </dd>
+                    <dd class="experience-task icon-gear">
+                      通过 FastAPI OpenAI 兼容 SSE 输出 reasoning、节点进度、回答正文及结构化意图卡片，协同前端打通知识问答、学习计划、今日待办、周报、素材查询和页面跳转。
+                    </dd>
+                  </dl>
+                </li>
                 <li class="timeline-item icon-bag">
                   <h3 class="timeline-title">
                     <span class="experience-place">C端H5和小程序-在线教育应用</span>
-                    <time class="experience-time">2025.01-至今</time>
+                    <time class="experience-time">2025.01-2026.02</time>
                   </h3>
                   <dl class="experience-content">
                     <dt class="experience-position"></dt>
                     <dd class="experience-task icon-gear">
-                      负责学天教育 APP 的营销、会员、运营和学习服务模块开发维护，包括营销活动、会员权益、优惠券、积分、学习报告、学习数据、课程订单、课程评价、课程分享、课程搜索、课程详情和课程目录等核心链路；同时承接 AI 学伴入口、消息流和业务卡片在多端的落地。
-                    </dd>
-                    <dd class="experience-task icon-gear">
-                      深度参与<strong>AI 学伴（学小天）</strong>前端主链路：基于 <strong>Vue3 + TypeScript</strong> 实现 SSE 流式问答、思考过程、Markdown/公式渲染、历史消息和结构化意图卡片，打通 Agent 的 <strong>reasoning / node.progress / content / xuetian.intent</strong> 事件协议。
-                    </dd>
-                    <dd class="experience-task icon-gear">
-                      自研端侧流式语音能力：使用 <strong>WebSocket + PCM 16kHz/16bit</strong> 分片对接 ASR，支持流式 TTS；通过 <strong>Web Audio</strong> 重采样、jitter buffer、iOS 原生播放回退和 ASR/TTS 音频会话协调器，解决移动端权限、抢占、断流、后台和取消竞态。
-                    </dd>
-                    <dd class="experience-task icon-gear">
-                      与 Python Agent 核心协同：对接 <strong>Intent Router v4</strong> 的 20 类学习意图和并行 pre-flight，配合教育 <strong>RAG</strong> 的 Query Rewrite、Dense + Sparse 召回、Rerank 和可靠性降级，将学习计划、今日待办、周报、素材、功能跳转等能力渲染为可点击业务卡片。
+                      c端负责人，主要负责学天教育 APP 嵌入 H5 页面、PC 主网站、小程序应用相关需求开发、维护和升级工作。H5 嵌入 App 原生 <strong>iOS</strong>、<strong>Android</strong>、<strong>小程序</strong>和<strong>鸿蒙</strong>端；小程序基于 <strong>Uniapp</strong> 框架开发。
                     </dd>
                     <dd class="experience-task icon-gear"> 
                       推动<strong>Cursor</strong>应用 AI 编程，引入 <strong>Figma MCP</strong>还原设计原稿，落地<strong>AI Rules</strong>规范和<strong>Plan</strong>模式，在设计稿、接口 mock、开发交付全链路提升研发效率。
@@ -289,9 +342,6 @@
                       <strong>Taro</strong>
                       框架进行开发，嵌入H5页面进行交互和需求实现。
                     </dd> -->
-                    <dd class="experience-task icon-gear">
-                     落地H5的<strong>AI助手</strong>页，具有基于<strong>SSE</strong>服务流式问答、实时智能语音、拍照、图片等功能，适配应用于IOS/Android/PC/HarmonyOS/小程序端
-                    </dd>
                     <dd class="experience-task icon-gear"> 
                     将基于<strong>Nuxtjs</strong>框架PC主站的首页、高访问页面的首开时间降至<strong>1s</strong>以内(<strong>秒开</strong>)，利用浏览器<strong>Perfomance</strong>面板，分析js/图片等关键性资源阻塞、网络等情况。
                     从的、空间、时间维度方向优化，压缩和减少阻塞关键资源，延迟和懒加载非关键资源。引入<strong>CDN</strong>节点服务，缓存js和css静态资源，加快边缘节点访问速度。
